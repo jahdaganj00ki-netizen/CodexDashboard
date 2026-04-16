@@ -1,0 +1,16 @@
+{
+  "name": "workspace-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop-oriented workspace shell for organizing websites as app entries.",
+  "scripts": {
+    "dev": "http-server . -p 5173 -c-1",
+    "build": "node -e \"const fs=require('fs');const path=require('path');const dist='dist';fs.rmSync(dist,{recursive:true,force:true});fs.mkdirSync(dist,{recursive:true});['index.html','styles.css','app.js','data.js','components.js','manifest.webmanifest','service-worker.js'].forEach((f)=>fs.copyFileSync(f,path.join(dist,f)));fs.cpSync('icons',path.join(dist,'icons'),{recursive:true});\"",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "http-server": "^14.1.1"
+  }
+}

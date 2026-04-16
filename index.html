@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workspace Hub</title>
+    <meta name="description" content="Desktop-style workspace for managing websites as app entries." />
+    <meta name="theme-color" content="#1e2429" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="./icons/icon-192.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <noscript>
+      <div class="noscript">Workspace Hub requires JavaScript to run.</div>
+    </noscript>
+
+    <main id="app-shell" class="app-shell" aria-label="Workspace Hub shell">
+      <aside id="sidebar" class="sidebar" aria-label="App Navigation"></aside>
+
+      <div class="center-shell">
+        <header id="toolbar" class="toolbar" aria-label="Workspace Toolbar"></header>
+
+        <section class="workspace-region" aria-label="Workspace">
+          <div id="tabbar" class="tabbar" aria-label="Tab Bar"></div>
+          <div id="main-content" class="main-content" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <aside id="utility-panel" class="utility-panel" aria-label="Utility Panel"></aside>
+    </main>
+
+    <div id="modal-root"></div>
+    <div id="toast-region" class="toast-region" aria-live="assertive"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
